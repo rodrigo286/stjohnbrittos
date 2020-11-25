@@ -28,7 +28,7 @@
 		<footer class="pt-4 my-md-5 pt-md-5 border-top text-center">
 			<div class="text-center align-middle">
 				<img class="mb-2" src="assets/images/ci4.png"" alt="" width="24" height="24">
-				<small class="d-block mb-3 text-muted">Grupo 10 &copy; 2020-2021</small>
+				<small class="d-block mb-3 text-muted">Grupo 10  &copy; 2020-2021</small>
 			</div>
 		</footer>
 	</body>
