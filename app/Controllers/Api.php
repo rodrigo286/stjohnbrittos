@@ -1,15 +1,55 @@
 <?php namespace App\Controllers;
 
+use App\Models\mApi;
+
 class Api extends BaseController
 {
-	public function getMenuItens()
+	public function categorys()
 	{
-		echo 'testes';
+		if(!$modelApi = new mApi())
+			return false;
+
+		if($categorys = $modelApi->getAllCategorys())
+		{
+			echo $categorys;
+		}
 	}
 
-	public function getCategorys()
+	public function debugCategorys()
 	{
-		echo 'testes';
+		if(!$modelApi = new mApi())
+			return false;
+
+		if($categorys = $modelApi->getAllCategorys())
+		{
+			echo '<pre>';
+			print_r($categorys);
+			echo '</pre>';
+		}
+	}
+
+	public function products()
+	{
+		if(!$modelApi = new mApi())
+			return false;
+
+		if($products = $modelApi->getAllProducts())
+		{
+			echo $products;
+		}
+	}
+
+	public function debugProducts()
+	{
+		if(!$modelApi = new mApi())
+			return false;
+
+		if($products = $modelApi->getAllProducts())
+		{
+			echo '<pre>';
+			print_r($products);
+			echo '</pre>';
+		}
 	}
 
 	public function ola()
