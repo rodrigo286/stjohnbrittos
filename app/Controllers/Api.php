@@ -78,6 +78,30 @@ class Api extends BaseController
 		}
 	}
 
+	public function productsByCat($id)
+	{
+		if(!$modelApi = new mApi())
+			return false;
+
+		if($products = $modelApi->getProductsByCat($id))
+		{
+			echo $products;
+		}
+	}
+
+	public function debugProductsByCat($id)
+	{
+		if(!$modelApi = new mApi())
+			return false;
+
+		if($products = $modelApi->getProductsByCat($id))
+		{
+			echo '<pre>';
+			print_r($products);
+			echo '</pre>';
+		}
+	}
+
 	public function ola()
 	{
 		echo 'O jogo...<br/><br/>';
