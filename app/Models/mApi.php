@@ -51,4 +51,14 @@ class mApi extends Model
 
 		return false;
 	}
+
+	public function getProductById($id)
+	{
+		if($product = $this->db->table($this->productDb)->where('productId', $id)->get()->getResultArray())
+		{
+			return json_encode($product);
+		}
+
+		return false;
+	}
 }
