@@ -22,6 +22,16 @@ class mApi extends Model
 		return false;
 	}
 
+	public function getCatById($id)
+	{
+		if($categorys = $this->db->table($this->categoryDb)->where('categoryId', $id)->get()->getResultArray())
+		{
+			return json_encode($categorys);
+		}
+
+		return false;
+	}
+
 	public function getAllProducts()
 	{
 		if($products = $this->db->table($this->productDb)->get()->getResultArray())

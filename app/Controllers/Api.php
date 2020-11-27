@@ -1,5 +1,7 @@
 <?php namespace App\Controllers;
 
+header("Access-Control-Allow-Origin: *");
+
 use App\Models\mApi;
 
 class Api extends BaseController
@@ -24,6 +26,30 @@ class Api extends BaseController
 		{
 			echo '<pre>';
 			print_r($categorys);
+			echo '</pre>';
+		}
+	}
+
+	public function categoryById($id)
+	{
+		if(!$modelApi = new mApi())
+			return false;
+
+		if($category = $modelApi->getCatById($id))
+		{
+			echo $category;
+		}
+	}
+
+	public function debugCategory($id)
+	{
+		if(!$modelApi = new mApi())
+			return false;
+
+		if($category = $modelApi->getCatById($id))
+		{
+			echo '<pre>';
+			print_r($category);
 			echo '</pre>';
 		}
 	}
