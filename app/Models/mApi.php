@@ -2,6 +2,8 @@
 
 use CodeIgniter\Model;
 
+setlocale(LC_ALL, 'pt_BR');
+
 class mApi extends Model
 {
 	var $productDb = 'product';
@@ -56,6 +58,7 @@ class mApi extends Model
 	{
 		if($product = $this->db->table($this->productDb)->where('productId', $id)->get()->getResultArray())
 		{
+			$product[0]['price'] = number_format($product[0]['price'], 2);
 			return json_encode($product);
 		}
 
