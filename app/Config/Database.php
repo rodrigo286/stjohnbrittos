@@ -33,7 +33,7 @@ class Database extends \CodeIgniter\Database\Config
 		'DSN'      => '',
 		'hostname' => 'localhost',
 		'username' => 'stjohn_deliver',
-		'password' => 'reggae28602860',
+		'password' => '{RETIRADO}',
 		'database' => 'stjohn_deliver',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
